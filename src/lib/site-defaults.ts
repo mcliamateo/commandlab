@@ -19,6 +19,19 @@ export const siteDefaults = {
     body: 'CommandLab is a tech solutions start-up that works across the whole stack. We design and build the devices, the systems and the software a business runs on, and we keep them running after launch.',
     chain: ['Hardware', 'Firmware', 'Systems', 'Software', 'AI'],
   },
+  origins: {
+    title: 'Where we started',
+    body: 'CommandLab started at Mapua University, where we make prototypes and are enthusiasts of prototyping and embedded systems. We began as PROTOCRAST, a group of Mapuans who are also members of Mapua ICpEP.SE Officers.',
+    people: [
+      {
+        name: 'Mc Liam Mateo',
+        role: 'Pioneer and Former President',
+        note: 'Former football player for Mapua University in the NCAA. Now a football coach and owner of Bagani Academy, a private football academy, and Villagers Football Club, a community club.',
+      },
+      { name: 'Lanz Clinton Valdez', role: 'Former Batch Representative' },
+    ],
+    memoriam: 'In memory of Alejandro Jerez',
+  },
   contact: {
     facebook: 'https://www.facebook.com/profile.php?id=61596603877658',
     facebookHandle: 'CommandLab',

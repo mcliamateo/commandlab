@@ -10,12 +10,28 @@ export const Route = createFileRoute('/_site/about')({
 })
 
 function AboutPage() {
-  const { about, introVideo } = siteDefaults
+  const { about, origins, introVideo } = siteDefaults
   return (
     <Container size="md" py={80}>
       <h1 className="page-title">{about.title}</h1>
       <p className="lead">{about.body}</p>
       <Chain items={about.chain} />
+
+      <section style={{ marginTop: 56 }}>
+        <h2 className="page-title" style={{ fontSize: '1.75rem' }}>
+          {origins.title}
+        </h2>
+        <p className="lead">{origins.body}</p>
+        <ul style={{ listStyle: 'none', padding: 0, marginTop: 24 }}>
+          {origins.people.map((person) => (
+            <li key={person.name} style={{ marginBottom: 12 }}>
+              <strong>{person.name}</strong>, <span>{person.role}</span>
+              {person.note && <p style={{ margin: '4px 0 0', opacity: 0.8 }}>{person.note}</p>}
+            </li>
+          ))}
+        </ul>
+        <p style={{ marginTop: 32, fontStyle: 'italic', opacity: 0.8 }}>{origins.memoriam}</p>
+      </section>
 
       <div className="video-wrap framed cyan-corners" style={{ marginTop: 56, maxWidth: 560 }}>
         <Corners />
