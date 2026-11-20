@@ -3,6 +3,7 @@ import { createFileRoute, Outlet } from '@tanstack/react-router'
 import { SiteFooter } from '~/components/site/site-footer'
 import { MessengerFloat } from '~/components/site/messenger-float'
 import { SiteHeader } from '~/components/site/site-header'
+import { WelcomeSplash } from '~/components/site/welcome-splash'
 
 export const Route = createFileRoute('/_site')({
   component: SiteLayout,
@@ -17,6 +18,7 @@ function SiteLayout() {
       </Box>
       <SiteFooter />
       <MessengerFloat />
+      <WelcomeSplash />
     </Box>
   )
 }

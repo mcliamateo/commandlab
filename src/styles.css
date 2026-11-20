@@ -187,3 +187,30 @@ a.project:hover h3 { color: var(--cyan); }
   * { animation: none !important; transition: none !important; }
   html { scroll-behavior: auto; }
 }
+
+/* Welcome splash (first visit per session): black screen, stacked logo, cyan segmented bar */
+.welcome {
+  position: fixed; inset: 0; z-index: 1000; background: #000; color: var(--text);
+  display: flex; align-items: center; justify-content: center; cursor: pointer; user-select: none;
+}
+.welcome-frame { position: absolute; inset: 40px; pointer-events: none; }
+.welcome-stage { display: flex; flex-direction: column; align-items: center; text-align: center; padding: 0 20px; }
+.welcome-logo { width: min(300px, 64vw); height: auto; color: var(--text); }
+.welcome-word { margin-top: 56px; font-size: 1rem; font-weight: 300; letter-spacing: .7em; padding-left: .7em; }
+.welcome-bar { margin-top: 32px; display: flex; gap: 6px; }
+.welcome-bar span { width: 14px; height: 14px; background: var(--line); }
+.welcome-bar span.on { background: var(--cyan); }
+.welcome-term {
+  margin-top: 28px; display: flex; align-items: center; gap: 10px;
+  font-family: ui-monospace, 'SF Mono', Menlo, Consolas, monospace; font-size: 15px; color: var(--muted);
+}
+.welcome-term .cursor { width: 9px; height: 17px; margin-left: 0; }
+.welcome-prompt {
+  position: absolute; left: 0; right: 0; bottom: 48px; text-align: center;
+  font-size: 12px; letter-spacing: .4em; padding-left: .4em; color: var(--muted);
+}
+@media (max-width: 640px) {
+  .welcome-word { letter-spacing: .5em; padding-left: .5em; }
+  .welcome-prompt { font-size: 11px; letter-spacing: .25em; padding: 0 16px; bottom: 32px; }
+  .welcome-frame { inset: 16px; }
+}
