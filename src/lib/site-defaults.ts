@@ -35,6 +35,8 @@ export const siteDefaults = {
   contact: {
     facebook: 'https://www.facebook.com/profile.php?id=61596603877658',
     facebookHandle: 'CommandLab',
+    // Messenger opens a chat with the Facebook page (m.me + the page id).
+    messenger: 'https://m.me/61596603877658',
     // Fill these in. Empty values show a placeholder on the page.
     email: '',
     phone: '',

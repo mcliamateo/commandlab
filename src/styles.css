@@ -44,6 +44,15 @@ p { text-wrap: pretty; }
 .btn-ghost:hover { border-color: var(--cyan); color: var(--cyan); }
 .btn-lg { padding: 16px 28px; }
 
+/* Floating Messenger button (bottom-right, same chamfer as the buttons) */
+.messenger-float {
+  position: fixed; right: 16px; bottom: calc(16px + env(safe-area-inset-bottom)); z-index: 90;
+  display: inline-flex; align-items: center; justify-content: center; width: 56px; height: 56px;
+  background: var(--cyan); color: #000; border: 1px solid var(--cyan); text-decoration: none;
+  clip-path: polygon(10px 0, 100% 0, 100% calc(100% - 10px), calc(100% - 10px) 100%, 0 100%, 0 10px);
+}
+.messenger-float:hover { background: var(--text); border-color: var(--text); }
+
 /* Corner brackets */
 .framed { position: relative; }
 .framed > .corner { position: absolute; width: 28px; height: 28px; pointer-events: none; color: var(--bracket); }

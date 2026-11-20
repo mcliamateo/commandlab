@@ -1,6 +1,7 @@
 import { Box } from '@mantine/core'
 import { createFileRoute, Outlet } from '@tanstack/react-router'
 import { SiteFooter } from '~/components/site/site-footer'
+import { MessengerFloat } from '~/components/site/messenger-float'
 import { SiteHeader } from '~/components/site/site-header'
 
 export const Route = createFileRoute('/_site')({
@@ -15,6 +16,7 @@ function SiteLayout() {
         <Outlet />
       </Box>
       <SiteFooter />
+      <MessengerFloat />
     </Box>
   )
 }
