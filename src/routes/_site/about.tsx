@@ -27,10 +27,24 @@ function AboutPage() {
             <li key={person.name} style={{ marginBottom: 12 }}>
               <strong>{person.name}</strong>, <span>{person.role}</span>
               {person.note && <p style={{ margin: '4px 0 0', opacity: 0.8 }}>{person.note}</p>}
+              {person.linkedin && (
+                <p style={{ margin: '4px 0 0' }}>
+                  <a href={person.linkedin} target="_blank" rel="noopener noreferrer">
+                    LinkedIn profile
+                  </a>
+                </p>
+              )}
             </li>
           ))}
         </ul>
-        <p style={{ marginTop: 32, fontStyle: 'italic', opacity: 0.8 }}>{origins.memoriam}</p>
+        <figure style={{ marginTop: 32, maxWidth: 240 }}>
+          <img
+            src="/about/alejandro-jerez.webp"
+            alt="Alejandro Jerez"
+            style={{ width: '100%', height: 'auto', display: 'block' }}
+          />
+          <figcaption style={{ marginTop: 8, fontStyle: 'italic', opacity: 0.8 }}>{origins.memoriam}</figcaption>
+        </figure>
       </section>
 
       <div className="video-wrap framed cyan-corners" style={{ marginTop: 56, maxWidth: 560 }}>

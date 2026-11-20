@@ -26,7 +26,8 @@ export const siteDefaults = {
       {
         name: 'Mc Liam Mateo',
         role: 'Pioneer and Former President',
-        note: 'Former football player for Mapua University in the NCAA. Now a football coach and owner of Bagani Academy, a private football academy, and Villagers Football Club, a community club.',
+        note: 'Mc Liam studied at Mapua University, where he was President of Mapúa-ICpEP.SE and sat on its Board of Directors, and played football for Mapua in the NCAA. He later worked as an Associate Software Engineer at Innodata and as a Mid-Level Mobile Developer at Zensap Technology, and is now the owner of CommandLab. He is also a football coach and owner of Bagani Academy, a private football academy, and of Villagers Football Club, a community club.',
+        linkedin: 'https://www.linkedin.com/in/mc-liam-mateo-9b1776200/',
       },
       { name: 'Lanz Clinton Valdez', role: 'Former Batch Representative' },
     ],
