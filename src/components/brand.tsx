@@ -22,11 +22,11 @@ export function Mark({ width, blink }: { width: number; blink?: boolean }) {
 }
 
 /** The mark with COMMANDLAB underneath. */
-export function Logo({ className, width }: { className?: string; width?: number }) {
+export function Logo({ className, width, blink }: { className?: string; width?: number; blink?: boolean }) {
   return (
     <svg className={className} width={width} viewBox="0 0 177 96" role="img" aria-label="CommandLab">
       <g fill="currentColor">
-        <MarkShapes />
+        <MarkShapes blink={blink} />
       </g>
       <text
         x="0"

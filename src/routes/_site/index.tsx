@@ -22,7 +22,7 @@ function HomePage() {
         <Container size="lg">
           <div className="hero-inner framed">
             <Corners />
-            <Logo className="logo-lg" />
+            <Logo className="logo-lg" blink />
             <div className="tagline">{branding.tagline}</div>
             <TerminalHero />
             <p className="sub">{hero.subtitle}</p>
