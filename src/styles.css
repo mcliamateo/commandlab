@@ -76,12 +76,24 @@ p { text-wrap: pretty; }
 
 /* Floating Messenger button (bottom-right, same chamfer as the buttons) */
 .messenger-float {
-  position: fixed; right: 16px; bottom: calc(16px + env(safe-area-inset-bottom)); z-index: 90;
-  display: inline-flex; align-items: center; justify-content: center; width: 56px; height: 56px;
-  background: var(--text); color: var(--bg); border: 1px solid var(--text); text-decoration: none;
+  position: fixed; right: 20px; bottom: calc(20px + env(safe-area-inset-bottom)); z-index: 90;
+  display: inline-flex; align-items: center; gap: 10px; min-height: 56px; padding: 14px 22px;
+  font-family: inherit; font-weight: 600; font-size: .82rem; letter-spacing: .18em; text-transform: uppercase;
+  background: var(--cyan); color: var(--bg); border: 1px solid var(--cyan); cursor: pointer;
+  box-shadow: 0 0 0 0 color-mix(in srgb, var(--cyan) 60%, transparent);
+  animation: messenger-pulse 2.4s ease-out infinite;
   clip-path: polygon(10px 0, 100% 0, 100% calc(100% - 10px), calc(100% - 10px) 100%, 0 100%, 0 10px);
 }
-.messenger-float:hover { background: var(--muted); border-color: var(--muted); }
+.messenger-float:hover { background: var(--text); border-color: var(--text); }
+.messenger-float:focus-visible { outline: 2px solid var(--text); outline-offset: 4px; }
+.messenger-float-label { white-space: nowrap; }
+@keyframes messenger-pulse {
+  0% { box-shadow: 0 0 0 0 color-mix(in srgb, var(--cyan) 60%, transparent); }
+  70% { box-shadow: 0 0 0 14px transparent; }
+  100% { box-shadow: 0 0 0 0 transparent; }
+}
+@media (max-width: 480px) { .messenger-float-label { display: none; } .messenger-float { padding: 14px; } }
+@media (prefers-reduced-motion: reduce) { .messenger-float { animation: none; } }
 
 /* Corner brackets */
 .framed { position: relative; }
