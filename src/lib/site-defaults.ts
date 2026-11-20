@@ -18,6 +18,8 @@ export const siteDefaults = {
     title: 'About CommandLab',
     body: 'CommandLab is a tech solutions start-up that works across the whole stack. We design and build the devices, the systems and the software a business runs on, and we keep them running after launch.',
     chain: ['Hardware', 'Firmware', 'Systems', 'Software', 'AI'],
+    nameOrigin:
+      'CommandLab takes its name from the command line, where every system we build begins. In the AI era, that interface has become a powerful way to turn intent into working software.',
   },
   origins: {
     title: 'Where we started',
