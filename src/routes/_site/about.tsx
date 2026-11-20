@@ -25,6 +25,7 @@ function AboutPage() {
     <Container size="md" py={80}>
       <h1 className="page-title">{about.title}</h1>
       <p className="lead">{about.body}</p>
+      <p className="lead">{about.nameOrigin}</p>
       <Chain items={about.chain} />
 
       <section style={{ marginTop: 56 }}>
