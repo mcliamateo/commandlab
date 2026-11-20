@@ -1,4 +1,5 @@
 import { Container } from '@mantine/core'
+import type { CSSProperties } from 'react'
 import { createFileRoute, Link } from '@tanstack/react-router'
 import { Corners } from '~/components/brand'
 import { Chain } from '~/components/site/chain'
@@ -8,6 +9,15 @@ export const Route = createFileRoute('/_site/about')({
   head: () => ({ meta: [{ title: 'About | CommandLab' }] }),
   component: AboutPage,
 })
+
+const circlePhoto: CSSProperties = {
+  width: 240,
+  height: 240,
+  borderRadius: '50%',
+  objectFit: 'cover',
+  display: 'block',
+  margin: '0 auto 16px',
+}
 
 function AboutPage() {
   const { about, origins, introVideo } = siteDefaults
@@ -24,7 +34,8 @@ function AboutPage() {
         <p className="lead">{origins.body}</p>
         <ul style={{ listStyle: 'none', padding: 0, marginTop: 24 }}>
           {origins.people.map((person) => (
-            <li key={person.name} style={{ marginBottom: 12 }}>
+            <li key={person.name} style={{ marginBottom: 32, textAlign: 'center' }}>
+              {person.photo && <img src={person.photo} alt={person.name} style={circlePhoto} />}
               <strong>{person.name}</strong>, <span>{person.role}</span>
               {person.note && <p style={{ margin: '4px 0 0', opacity: 0.8 }}>{person.note}</p>}
               {person.linkedin && (
@@ -37,12 +48,8 @@ function AboutPage() {
             </li>
           ))}
         </ul>
-        <figure style={{ marginTop: 32, maxWidth: 240 }}>
-          <img
-            src="/about/alejandro-jerez.webp"
-            alt="Alejandro Jerez"
-            style={{ width: '100%', height: 'auto', display: 'block' }}
-          />
+        <figure style={{ marginTop: 32, textAlign: 'center' }}>
+          <img src="/about/alejandro-jerez.webp" alt="Alejandro Jerez" style={circlePhoto} />
           <figcaption style={{ marginTop: 8, fontStyle: 'italic', opacity: 0.8 }}>{origins.memoriam}</figcaption>
         </figure>
       </section>
@@ -50,7 +57,7 @@ function AboutPage() {
       <div className="video-wrap framed cyan-corners" style={{ marginTop: 56, maxWidth: 560 }}>
         <Corners />
         {/* biome-ignore lint/a11y/useMediaCaption: the intro video has no speech */}
-        <video src={introVideo} controls playsInline preload="metadata" aria-label="CommandLab intro video" />
+        <video src={introVideo} controls autoPlay muted loop playsInline preload="auto" aria-label="CommandLab intro video" />
       </div>
 
       <div className="actions" style={{ justifyContent: 'flex-start', marginTop: 48 }}>
