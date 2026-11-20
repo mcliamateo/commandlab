@@ -37,7 +37,6 @@ function AboutPage() {
             <li key={person.name} style={{ marginBottom: 32, textAlign: 'center' }}>
               {person.photo && <img src={person.photo} alt={person.name} style={circlePhoto} />}
               <strong style={{ display: 'block', fontSize: '1.25rem' }}>{person.name}</strong>
-              <span style={{ display: 'block' }}>{person.role}</span>
               {person.note && <p style={{ margin: '4px 0 0', opacity: 0.8 }}>{person.note}</p>}
               {(person.linkedin || person.github) && (
                 <p style={{ margin: '4px 0 0', display: 'flex', gap: 16, justifyContent: 'center' }}>

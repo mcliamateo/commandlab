@@ -25,16 +25,14 @@ export const siteDefaults = {
     people: [
       {
         name: 'Mc Liam Mateo',
-        role: 'Pioneer and Former President',
-        note: 'Mc Liam finished a Bachelor of Science in Computer Engineering, specializing in Embedded Systems, at Mapua University, where he was President of Mapúa-ICpEP.SE and sat on its Board of Directors, and played football for Mapua in the NCAA. He later worked as an Associate Software Engineer at Innodata and as a Mid-Level Mobile Developer at Zensap Technology, and is now the owner of CommandLab. He is also a football coach and owner of Bagani Academy, a private football academy, and of Villagers Football Club, a community club.',
+        note: 'Mc Liam finished a Bachelor of Science in Computer Engineering, specializing in Embedded Systems, at Mapua University, where he was President of Mapúa-ICpEP.SE and sat on its Board of Directors, and played football for Mapua in the NCAA. He later worked as an Associate Software Engineer at Innodata and as a Mid-Level Mobile Developer at Zensap Technology, and is now one of the founders of CommandLab. He is also a football coach and owner of Bagani Academy, a private football academy, and of Villagers Football Club, a community club.',
         linkedin: 'https://www.linkedin.com/in/mc-liam-mateo-9b1776200/',
         github: 'https://github.com/mcliamateo',
         photo: '/about/mc-liam-mateo.png',
       },
       {
         name: 'Lanz Clinton Valdez',
-        role: 'Former Batch Representative',
-        note: 'Holds a Bachelor of Science in Computer Engineering, specializing in Embedded Systems. Full-stack web developer who builds maintainable, data-driven web systems with clean TypeScript. Currently building business-critical internal software across frontend, backend, database design, reporting and background processing.',
+        note: 'Holds a Bachelor of Science in Computer Engineering, specializing in Embedded Systems. Full-stack web developer who builds maintainable, data-driven web systems with clean TypeScript. Currently building business-critical internal software across frontend, backend, database design, reporting and background processing. One of the founders of CommandLab.',
         linkedin: 'https://www.linkedin.com/in/lanzclintonv/',
         github: 'https://github.com/lanzclintonv',
         photo: '/about/lanz-clinton-valdez.png',
