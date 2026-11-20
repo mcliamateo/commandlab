@@ -12,7 +12,7 @@ export const Route = createRootRoute({
     meta: [
       { charSet: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { title: 'CommandLab — Tech Solutions, Hardware to Software' },
+      { title: 'CommandLab | Tech Solutions, Hardware to Software' },
       {
         name: 'description',
         content:

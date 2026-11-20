@@ -18,7 +18,7 @@ function HomePage() {
   return (
     <>
       {/* Hero (cafe: tagline badge + headline + subtitle + two buttons) */}
-      <div className="hero dots">
+      <div className="hero">
         <Container size="lg">
           <div className="hero-inner framed">
             <Corners />
@@ -43,7 +43,6 @@ function HomePage() {
         <Container size="lg">
           <div className="section-head">
             <div>
-              <p className="label">{branding.kicker}</p>
               <h2>What we do</h2>
               <p className="dimmed">Five services, one team, from hardware to software.</p>
             </div>
@@ -64,7 +63,6 @@ function HomePage() {
         <Container size="lg">
           <div className="section-head">
             <div>
-              <p className="label">Projects</p>
               <h2>What we've built</h2>
               <p className="dimmed">Live systems for cafes, sports clubs, communities and shops.</p>
             </div>
@@ -85,7 +83,6 @@ function HomePage() {
         <Container size="lg">
           <div className="intro-grid">
             <div>
-              <p className="label">Intro</p>
               <h2>
                 From hardware
                 <br />
@@ -106,11 +103,10 @@ function HomePage() {
       </section>
 
       {/* About + info card (cafe: about text + hours/address/phone card) */}
-      <section className="band dots">
+      <section className="band">
         <Container size="lg">
           <div className="about-grid">
             <div>
-              <p className="label">About</p>
               <h2>{about.title}</h2>
               <p className="lead">{about.body}</p>
               <Chain items={about.chain} />
@@ -127,7 +123,6 @@ function HomePage() {
             <Corners />
             <h2>
               We're live
-              <span className="cursor blink" aria-hidden="true" />
             </h2>
             <p>
               <span className="cyan">&gt;</span> follow our page for updates

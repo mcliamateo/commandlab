@@ -5,7 +5,7 @@ import { Chain } from '~/components/site/chain'
 import { siteDefaults } from '~/lib/site-defaults'
 
 export const Route = createFileRoute('/_site/about')({
-  head: () => ({ meta: [{ title: 'About — CommandLab' }] }),
+  head: () => ({ meta: [{ title: 'About | CommandLab' }] }),
   component: AboutPage,
 })
 
@@ -13,7 +13,6 @@ function AboutPage() {
   const { about, introVideo } = siteDefaults
   return (
     <Container size="md" py={80}>
-      <p className="label">About</p>
       <h1 className="page-title">{about.title}</h1>
       <p className="lead">{about.body}</p>
       <Chain items={about.chain} />

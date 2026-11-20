@@ -27,7 +27,7 @@ export function SiteHeader() {
       <Container size="lg" h={68}>
         <Group h="100%" justify="space-between" wrap="nowrap">
           <Link to="/" className="brand" aria-label="CommandLab home">
-            <Mark width={60} blink />
+            <Mark width={60} />
             <span className="wm">
               COMMAND<b>LAB</b>
             </span>

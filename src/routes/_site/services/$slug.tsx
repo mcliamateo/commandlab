@@ -10,13 +10,12 @@ export const Route = createFileRoute('/_site/services/$slug')({
     if (!service) throw notFound()
     return service
   },
-  head: ({ loaderData }) => ({ meta: [{ title: `${loaderData?.title ?? 'Service'} — CommandLab` }] }),
+  head: ({ loaderData }) => ({ meta: [{ title: `${loaderData?.title ?? 'Service'} | CommandLab` }] }),
   component: ServicePage,
 })
 
 function ServicePage() {
   const service = Route.useLoaderData()
-  const n = services.findIndex((s) => s.slug === service.slug) + 1
   const others = services.filter((s) => s.slug !== service.slug)
 
   return (
@@ -27,9 +26,6 @@ function ServicePage() {
 
       <div className="service-hero framed">
         <Corners />
-        <span className="num">
-          <b>{String(n).padStart(2, '0')}</b> / {String(services.length).padStart(2, '0')}
-        </span>
         <div className="service-icon-lg">
           <ServiceIcon name={service.icon} />
         </div>
@@ -42,9 +38,9 @@ function ServicePage() {
         </div>
       </div>
 
-      <p className="label" style={{ marginTop: 64 }}>
+      <h2 className="sub-head">
         Other services
-      </p>
+      </h2>
       <ul className="other-services">
         {others.map((s) => (
           <li key={s.slug}>

@@ -20,9 +20,8 @@ export const siteDefaults = {
     chain: ['Hardware', 'Firmware', 'Systems', 'Software', 'AI'],
   },
   contact: {
-    // Check this is the right page.
-    facebook: 'https://www.facebook.com/commandlab',
-    facebookHandle: '/commandlab',
+    facebook: 'https://www.facebook.com/profile.php?id=61596603877658',
+    facebookHandle: 'CommandLab',
     // Fill these in. Empty values show a placeholder on the page.
     email: '',
     phone: '',
@@ -70,6 +69,7 @@ export const projects: Project[] = [
     description: 'A basketball open play app for everyone who likes basketball.',
     logo: '/projects/lazy-hoops.png',
     tile: 'light',
+    url: 'https://lazyhoops.vercel.app',
   },
   {
     name: 'Bagani Academy',
