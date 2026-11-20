@@ -19,6 +19,17 @@ export const Route = createRootRoute({
           'CommandLab: business solutions, full-stack development, embedded systems, IT solutions and AI engineering.',
       },
       { name: 'theme-color', content: '#0a0a0a' },
+      { property: 'og:title', content: 'CommandLab | Tech Solutions, Hardware to Software' },
+      {
+        property: 'og:description',
+        content:
+          'CommandLab: business solutions, full-stack development, embedded systems, IT solutions and AI engineering.',
+      },
+      { property: 'og:type', content: 'website' },
+      { property: 'og:image', content: 'https://commandlab-lyart.vercel.app/og-image.png' },
+      { property: 'og:image:width', content: '1200' },
+      { property: 'og:image:height', content: '630' },
+      { name: 'twitter:card', content: 'summary_large_image' },
     ],
     links: [
       { rel: 'preconnect', href: 'https://fonts.googleapis.com' },
