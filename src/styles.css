@@ -33,9 +33,13 @@
 html { scroll-behavior: smooth; }
 body {
   background-color: var(--bg);
+  color: var(--text); font-weight: 400; line-height: 1.6;
+}
+/* Dot grid sits on a fixed layer so it stays in place while the page scrolls. */
+body::before {
+  content: ""; position: fixed; inset: 0; z-index: -1; pointer-events: none;
   background-image: radial-gradient(circle at 1px 1px, var(--dot) 1px, transparent 1.5px);
   background-size: 82px 82px;
-  color: var(--text); font-weight: 400; line-height: 1.6;
 }
 h1, h2, h3 { text-wrap: balance; }
 p { text-wrap: pretty; }
