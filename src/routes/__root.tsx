@@ -18,7 +18,7 @@ export const Route = createRootRoute({
         content:
           'CommandLab: business solutions, full-stack development, embedded systems, IT solutions and AI engineering.',
       },
-      { name: 'theme-color', content: '#000000' },
+      { name: 'theme-color', content: '#0a0a0a' },
     ],
     links: [
       { rel: 'preconnect', href: 'https://fonts.googleapis.com' },
@@ -38,11 +38,11 @@ function RootDocument({ children }: { children: ReactNode }) {
   return (
     <html lang="en" {...mantineHtmlProps}>
       <head>
-        <ColorSchemeScript forceColorScheme="dark" />
+        <ColorSchemeScript defaultColorScheme="auto" />
         <HeadContent />
       </head>
       <body>
-        <MantineProvider theme={theme} forceColorScheme="dark">
+        <MantineProvider theme={theme} defaultColorScheme="auto">
           {children}
         </MantineProvider>
         <Scripts />

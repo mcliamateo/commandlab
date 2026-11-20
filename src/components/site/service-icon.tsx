@@ -2,7 +2,7 @@ import type { ReactNode } from 'react'
 import type { ServiceIcon as IconName } from '~/lib/site-defaults'
 
 // Line icons drawn after the ones in the intro video: white strokes with one cyan detail.
-const W = '#fff'
+const W = 'currentColor'
 const C = 'var(--cyan)'
 
 export function ServiceIcon({ name }: { name: IconName }) {
