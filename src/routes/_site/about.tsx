@@ -38,11 +38,18 @@ function AboutPage() {
               {person.photo && <img src={person.photo} alt={person.name} style={circlePhoto} />}
               <strong>{person.name}</strong>, <span>{person.role}</span>
               {person.note && <p style={{ margin: '4px 0 0', opacity: 0.8 }}>{person.note}</p>}
-              {person.linkedin && (
-                <p style={{ margin: '4px 0 0' }}>
-                  <a href={person.linkedin} target="_blank" rel="noopener noreferrer">
-                    LinkedIn profile
-                  </a>
+              {(person.linkedin || person.github) && (
+                <p style={{ margin: '4px 0 0', display: 'flex', gap: 16, justifyContent: 'center' }}>
+                  {person.linkedin && (
+                    <a href={person.linkedin} target="_blank" rel="noopener noreferrer">
+                      LinkedIn profile
+                    </a>
+                  )}
+                  {person.github && (
+                    <a href={person.github} target="_blank" rel="noopener noreferrer">
+                      GitHub profile
+                    </a>
+                  )}
                 </p>
               )}
             </li>
